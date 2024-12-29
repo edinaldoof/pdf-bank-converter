@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/pdf-bank-converter/static/css/main.d2350a50.css",
+    "main.js": "/pdf-bank-converter/static/js/main.b6453c78.js",
+    "static/js/238.12dcfef3.chunk.js": "/pdf-bank-converter/static/js/238.12dcfef3.chunk.js",
+    "static/js/488.140d01dd.chunk.js": "/pdf-bank-converter/static/js/488.140d01dd.chunk.js",
+    "index.html": "/pdf-bank-converter/index.html",
+    "main.d2350a50.css.map": "/pdf-bank-converter/static/css/main.d2350a50.css.map",
+    "main.b6453c78.js.map": "/pdf-bank-converter/static/js/main.b6453c78.js.map",
+    "238.12dcfef3.chunk.js.map": "/pdf-bank-converter/static/js/238.12dcfef3.chunk.js.map",
+    "488.140d01dd.chunk.js.map": "/pdf-bank-converter/static/js/488.140d01dd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2350a50.css",
+    "static/js/main.b6453c78.js"
+  ]
+}
