@@ -10,14 +10,12 @@ import pandas as pd
 
 app = FastAPI()
 
-# Configurar CORS com variáveis de ambiente
-origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=[os.getenv("ALLOWED_ORIGINS", "http://localhost:3000")],
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"]
+    allow_headers=["*"],
 )
 
 def clean_text(text):
@@ -73,10 +71,6 @@ def process_pdf(pdf_path):
     
     return dados
 
-@app.get("/")
-async def root():
-    return {"message": "API do Conversor de Relatório Bancário FADEX"}
-
 @app.post("/api/convert")
 async def convert_pdfs(files: List[UploadFile] = File(...)):
     try:
@@ -94,6 +88,5 @@ async def convert_pdfs(files: List[UploadFile] = File(...)):
         return {"status": "error", "message": str(e)}
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
